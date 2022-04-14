@@ -1,12 +1,18 @@
-<h1>Secret Posts</h1>
+<div class="main-post-container" >
+  <h2>Post anything you want! You will be safe from the outside.</h2>
 
-<h2>Post anything you want! You will be safe from the outside.</h2>
-
-<div class="post-container">
-    <% @posts.each do |post| %>
-        <div class="post-card">
-            <p> <%= post.title %> </p>
-            <p> <%= post.body %> </p>
+  <div class="post-container">
+    <% if @posts.empty? %>
+        <div class="no-posts">There are no posts :(</div>
+    <% else %>
+        <div class="post-organizer">
+            <% @posts.each do |post| %>
+                <div class="post-card">
+                    <p> <%= post.title %> </p>
+                    <p> <%= post.body %> </p>
+                </div>
+            <% end %>
         </div>
     <% end %>
+  </div>
 </div>

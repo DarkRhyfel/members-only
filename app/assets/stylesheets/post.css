@@ -1,0 +1,27 @@
+.main-post-container {
+    padding: 0 3vw;
+}
+
+.post-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-items: center;
+}
+
+.post-organizer {
+    grid-column: 2 / 3;
+    width: 100%;
+}
+
+.no-posts {
+    grid-column: 2 / 3;
+    width: 75%;
+    height: 10vh;
+    background-color: rgb(191, 187, 187);
+    border-radius: 10px;
+    color: white;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
