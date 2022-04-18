@@ -1,24 +1,10 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Rails authentication project
 
-Things you may want to cover:
+### Objectives
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Create a rails project where users can make posts.
+- Only authenticated users can create new posts.
+- The posts are shown to all users, but only authenticated users can see who created the post.
+- Implement some basic forms with basic CSS.
