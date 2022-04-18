@@ -1,5 +1,5 @@
 <div class="main-post-container" >
-  <h2>Post anything you want! You will be safe from the outsiders >:)</h2>
+  <h2>Post anything you want! You will be safe from outsiders >:)</h2>
 
   <div class="post-container">
     <% if @posts.empty? %>
@@ -8,9 +8,13 @@
         <div class="post-organizer">
             <% @posts.each do |post| %>
                 <div class="post-card">
-                    <p> <%= post.title %> </p>
-                    <p> <%= post.body %> </p>
-                    <p> <%= post.user.name %> </p>
+                    <p class="post-title"> <%= post.title %> </p>
+                    <p class="post-body"> <%= post.body %> </p>
+                    <% if user_signed_in? %>
+                        <p class="post-creator"> <%= post.user.name %> </p>
+                    <% else %>
+                        <p class="post-creator"> Anonymous </p>
+                    <% end %>
                 </div>
             <% end %>
         </div>

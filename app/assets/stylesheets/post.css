@@ -11,6 +11,9 @@
 .post-organizer {
     grid-column: 2 / 3;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2vh 2vw;
 }
 
 .no-posts {
@@ -24,4 +27,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.post-card {
+    padding: 2vh 2vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    row-gap: 2vh;
+    font-size: 1rem;
+}
+
+.post-card p {
+    margin: 0;
+    padding: 0;
+}
+
+.post-title {
+    font-weight: bold;
+}
+
+.post-creator {
+    justify-self: end;
+    font-style: italic;
 }
